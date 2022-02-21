@@ -1,0 +1,87 @@
+Question:
+
+or the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+var obj=[
+{person:"Name",age:"2',company:'Guvi"}
+{person:"Name",age:'3",company:"Guvi Geek"}
+{person:"Name",age:'4",company:"Guvi Geek Network"}
+]
+
+ANSWER:
+
+var obj=[
+    {
+    person:"kumar",
+    age:"23",
+    company:"Guvi"},
+{
+    person:"rajesh",
+    age:"31",
+    company:"Guvi Geek"},
+     {person:"sruthi",
+     age:"40",
+      company:"Guvi Geek Network"}
+    ]
+    //by using for loop
+    for (var i=0;i<obj.length;i++)
+    {
+        data = obj [i]; 
+        console.log(
+            `
+             person:${data.person}
+            age: ${data.age}
+            company: ${data.company}
+            `
+            );
+    }
+    //by using for-each loop
+    obj.forEach((function(data) 
+    {
+        console.log(
+        `
+                 person:${data.person}
+                age: ${data.age}
+                company: ${data.company}
+                `
+       )
+    }));
+
+    
+// // by using for in loop
+for (let index in obj) {
+    data = obj[index];
+    console.log(
+        `
+                 person:${data.person}
+                age: ${data.age}
+                company: ${data.company}
+                `
+    );
+}
+//by using for of loop
+for (var key  of obj){
+    data=obj[key];
+    console.log(
+        `
+        person:${key.person}
+        age: ${key.age}
+        company : ${key.company}
+        `
+    )
+}
+
+OUTPUT:
+	    person:kumar
+            age: 23
+            company: Guvi
+            
+
+             person:rajesh
+            age: 31
+            company: Guvi Geek
+            
+
+             person:sruthi
+            age: 40
+            company: Guvi Geek Network

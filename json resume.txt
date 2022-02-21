@@ -1,0 +1,42 @@
+QUESTION:
+Create your own resume data in JSON format
+
+ANSWER:
+
+let resumedata =[
+    {
+    basics: {
+      name: "nirmal",
+      dob : "12.06.96",
+      email: "ra.nirmalkumar96@gmail.com",
+      degree: "B.E",
+       city: "chennai",
+      }
+    },
+      {
+          education: [
+        {
+          institution: "Anna university",
+          area: "Mechanical engineering",
+          passedoutyear: "2017",
+          gpa: "7.13",
+        }
+      ]},
+      {
+          work: [
+        {
+          Industry: "film",
+          position: "associate director",
+            from: "2017",
+            to: "2021"
+        }
+      ],
+ }
+]
+
+for (var i = 0; i <resumedata.length; i++) {
+    
+    console.log(resumedata[i]);
+}
+
+
